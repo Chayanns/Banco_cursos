@@ -87,7 +87,7 @@ class AtualizarCursos(QWidget):
                            (self.editChor.text(), self.editId.text()))
            
         else:
-            cursor.execute("update registrodecursos set nome_cursos=%s where cursos_id=%s",
+            cursor.execute("update registrodecursos set nome_cursos=%s, cargahoraria=%s where cursos_id=%s",
                            (self.editNome.text(), self.editChor.text(), self.editId.text()))
            
         cx.commit()
